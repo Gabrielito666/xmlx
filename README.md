@@ -8,7 +8,7 @@ npm i xmlx
 
 ```jsx
 //my-xml.js
-import Xmlx from "@lek/xmlx";
+import Xmlx from "@lek-js/xmlx";
 const Word = ({children}) =>  <a-tag>{children}</a-tag>
 
 const xml = <my-tag>
@@ -22,7 +22,7 @@ console.log(xml);
 
 ```js
 //my-builder.js
-const buildXmlx = require("@lek/xmlx/builder");
+const buildXmlx = require("@lek-js/xmlx/builder");
 
 buildXmlx("./my-xml.js", "bundle.js");
 ```

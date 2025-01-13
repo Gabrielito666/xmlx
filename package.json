@@ -1,5 +1,5 @@
 {
-  "name": "@lek/xmlx",
+  "name": "@lek-js/xmlx",
   "version": "1.0.0",
   "main": "./index.js",
   "scripts": {
