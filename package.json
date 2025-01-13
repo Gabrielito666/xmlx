@@ -1,0 +1,14 @@
+{
+  "name": "xmlx",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "author": "Gabriel Farías",
+  "license": "MIT",
+  "description": "create xml with jsx",
+  "dependencies": {
+    "esbuild": "^0.24.2"
+  }
+}
