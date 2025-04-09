@@ -1,5 +1,18 @@
+const flattenChildren = (children) => {
+    const flat = [];
+
+    const recurse = (child) => {
+        if (Array.isArray(child)) child.forEach(recurse);
+        else if (child !== null && child !== undefined && child !== false) flat.push(child);
+    };
+
+    recurse(children);
+    return flat;
+};
+
 const createElement = (tag, att={}, ...children) =>
 { 
+    children = flattenChildren(children);
     if(typeof tag === "function")
     {
         return tag({ ...att, children : children.join("") });
@@ -11,7 +24,7 @@ const createElement = (tag, att={}, ...children) =>
     }
 }
 
-const Fragment = (...children) => children.join("");
+const Fragment = (args) =>[...flattenChildren(args.children)].join("");
 
 const Xmlx = { createElement, Fragment };
 
