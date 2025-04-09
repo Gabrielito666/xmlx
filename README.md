@@ -16,7 +16,6 @@ const xml = <my-tag>
    <Word>World</Word>
 </my-tag>
 
-
 console.log(xml);
 ```
 

@@ -1,6 +1,6 @@
 const esbuild = require('esbuild');
 
-const build = (main, outfile) =>
+const build = (main, outfile, {platform="node", minify=true, sourcemap=false}) =>
 {
     esbuild.buildSync({
         entryPoints: [main],
@@ -10,8 +10,9 @@ const build = (main, outfile) =>
         jsxFactory: 'Xmlx.createElement',
         jsxFragment: 'Xmlx.Fragment',
         define: {'process.env.NODE_ENV': '"production"'},
-        minify: true,
-        sourcemap: false,
+        minify,
+        sourcemap,
+        platform
     })  
 }
 

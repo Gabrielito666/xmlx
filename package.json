@@ -1,9 +1,9 @@
 {
   "name": "@lek-js/xmlx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./index.js",
   "scripts": {
-    "test": "node index.test.js"
+    "test": "node test/index.builder.test.js && node test/index.bundle.test.js"
   },
   "author": "Gabriel Farías",
   "license": "MIT",
